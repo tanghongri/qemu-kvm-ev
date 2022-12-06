@@ -1,5 +1,5 @@
 # 说明
-修改原因：CenOS安装上qemu-kvm-ev后，因为不支持isa-applesmc无法启动macOS
+修改原因：CenOS7安装上qemu-kvm-ev后，因为不支持isa-applesmc无法启动macOS
 
 error: Failed to start domain macOS
 
