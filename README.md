@@ -1,3 +1,25 @@
+# 说明
+修改原因：CenOS安装上qemu-kvm-ev后，因为不支持isa-applesmc无法启动macOS
+
+error: Failed to start domain macOS
+
+error: internal error: qemu unexpectedly closed the monitor: 2022-12-06T10:53:12.594510Z qemu-kvm: -device isa-applesmc,osk=ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc: 'isa-applesmc' is not a valid device model name
+
+## 相关资料：
+
+https://github.com/foxlet/macOS-Simple-KVM/issues/110#issuecomment-552015060
+
+https://bugs.centos.org/view.php?id=16672
+
+## Akiko97/qemu-kvm-ev修改内容
+SOURCES\build_configure.sh中删除了"--disable-tpm \"
+
+rm -fr ~/rpmbuild
+
+mkdir -pv ~/rpmbuild/{SOURCES,SPECS}
+
+
+
 # qemu-kvm-ev
 
 modified qemu-kvm-ev for CentOS 7: add TPM Support
@@ -43,11 +65,3 @@ sudo yum install -y gnutls-devel cyrus-sasl-devel libaio-devel pciutils-devel li
 cd SPECS
 rpmbuild -ba qemu-kvm.spec
 ```
-
-https://github.com/foxlet/macOS-Simple-KVM/issues/110#issuecomment-552015060
-
-https://bugs.centos.org/view.php?id=16672
-
-rm -fr ~/rpmbuild
-
-mkdir -pv ~/rpmbuild/{SOURCES,SPECS}
