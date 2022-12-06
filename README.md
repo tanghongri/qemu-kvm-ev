@@ -5,6 +5,8 @@ error: Failed to start domain macOS
 
 error: internal error: qemu unexpectedly closed the monitor: 2022-12-06T10:53:12.594510Z qemu-kvm: -device isa-applesmc,osk=ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc: 'isa-applesmc' is not a valid device model name
 
+<model type='vmxnet3'/>
+
 ## 相关资料：
 
 https://github.com/foxlet/macOS-Simple-KVM/issues/110#issuecomment-552015060
@@ -15,6 +17,8 @@ https://bugs.centos.org/view.php?id=16672
 SOURCES\build_configure.sh中删除了"--disable-tpm \"
 
 ## 本次修改内容
+SOURCES\0004-Enable-disable-devices-for-RHEL-7.patch中删除了修改461行的 "+#CONFIG_VMXNET3_PCI=y" 为 "+CONFIG_VMXNET3_PCI=y"
+
 SOURCES\0004-Enable-disable-devices-for-RHEL-7.patch中删除了修改492行的 "+#CONFIG_APPLESMC=y" 为 "+CONFIG_APPLESMC=y"
 
 ## 源码来源 
