@@ -44,3 +44,7 @@ cd SPECS
 rpmbuild -ba qemu-kvm.spec
 ```
 
+https://github.com/foxlet/macOS-Simple-KVM/issues/110#issuecomment-552015060
+
+https://bugs.centos.org/view.php?id=16672
+
