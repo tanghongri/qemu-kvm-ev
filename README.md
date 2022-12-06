@@ -14,11 +14,13 @@ https://bugs.centos.org/view.php?id=16672
 ## Akiko97/qemu-kvm-ev修改内容
 SOURCES\build_configure.sh中删除了"--disable-tpm \"
 
+## 编译命令
+```shell
 rm -fr ~/rpmbuild
-
-mkdir -pv ~/rpmbuild/{SOURCES,SPECS}
-
-
+mkdir -p ~/rpmbuild;cp -fr SOURCES SPECS  ~/rpmbuild
+cd ~/rpmbuild/SPECS
+rpmbuild -ba qemu-kvm.spec
+```
 
 # qemu-kvm-ev
 
