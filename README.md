@@ -14,6 +14,9 @@ https://bugs.centos.org/view.php?id=16672
 ## Akiko97/qemu-kvm-ev修改内容
 SOURCES\build_configure.sh中删除了"--disable-tpm \"
 
+## 本次修改内容
+SOURCES\0004-Enable-disable-devices-for-RHEL-7.patch中删除了修改492行的 "+#CONFIG_APPLESMC=y" 为 "+CONFIG_APPLESMC=y"
+
 ## 编译命令
 ```shell
 rm -fr ~/rpmbuild
